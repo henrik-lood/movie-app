@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useQuery } from "react-query";
+import { Link } from "react-router-dom";
 import { getItems } from "../services/TMDB-API";
 
 const GenrePage = () => {
@@ -18,7 +19,11 @@ const GenrePage = () => {
       <div>Genres:</div>
       {data?.data &&
         data.data.genres.map((genre, index) => {
-          return <div key={index}>{genre.name}</div>;
+          return (
+            <div key={index}>
+              <Link to={`/genres/${genre.id}`}>{genre.name}</Link>
+            </div>
+          );
         })}
     </>
   );

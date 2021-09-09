@@ -4,7 +4,7 @@ axios.defaults.baseURL = 'https://api.themoviedb.org/3/'
 
 export const getItems = async (endpoint) => {
 	const response = await axios.get(endpoint)
-  console.log(response)
+  console.log(endpoint, response)
 	return response
 }
 

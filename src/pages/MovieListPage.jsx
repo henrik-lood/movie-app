@@ -12,7 +12,6 @@ const MovieListPage = () => {
 
   useEffect(() => {
     console.log("data is:", data);
-    console.log(typeof data);
   }, [data]);
 
   return (

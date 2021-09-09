@@ -5,8 +5,8 @@ import HomePage from "./pages/HomePage";
 import GenrePage from "./pages/GenrePage";
 import MoviePage from "./pages/MoviePage";
 import ActorPage from "./pages/ActorPage";
-import MovieList from "./components/MovieList";
 import MovieListPage from "./pages/MovieListPage";
+import MoviesByGenrePage from "./pages/MoviesByGenrePage";
 
 function App() {
   return (
@@ -18,6 +18,10 @@ function App() {
             <HomePage />
           </Route>
 
+          <Route path="/genres/:genreid">
+            <MoviesByGenrePage />
+          </Route>
+
           <Route path="/genres">
             <GenrePage />
           </Route>
@@ -26,7 +30,7 @@ function App() {
             <MovieListPage />
           </Route>
 
-          <Route path="/movie/:id">
+          <Route path="/movie/:movieid">
             <MoviePage />
           </Route>
 
