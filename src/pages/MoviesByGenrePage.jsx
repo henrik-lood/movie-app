@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useQuery } from "react-query";
-import { Link } from "react-router-dom";
 import { getItems } from "../services/TMDB-API";
 import { useParams } from "react-router-dom";
+import Movie from "../components/Movie";
 
 const MoviesByGenrePage = () => {
   const { genreid } = useParams();
@@ -20,15 +20,9 @@ const MoviesByGenrePage = () => {
     <>
       <div>Movies by genre:</div>
       {data?.data &&
-        data.data.results.map((movie, index) => {
-          return (
-            <>
-              <div key={index}>
-                <Link to={`/movie/${movie.id}`}>{movie.title}</Link>
-              </div>
-            </>
-          );
-        })}
+        data.data.results.map((movie, index) => (
+          <Movie key={index} props={movie} />
+        ))}
     </>
   );
 };

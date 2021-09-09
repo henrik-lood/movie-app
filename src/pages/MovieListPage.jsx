@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useQuery } from "react-query";
 import { getItems } from "../services/TMDB-API";
 import { useParams } from "react-router-dom";
+import Movie from "../components/Movie";
 
 const MovieListPage = () => {
   const { toptype } = useParams();
@@ -18,9 +19,9 @@ const MovieListPage = () => {
     <>
       <div>Movie list page:</div>
       {data?.data &&
-        data.data.results.map((movie, index) => {
-          return <div key={index}>{movie.title}</div>;
-        })}
+        data.data.results.map((movie, index) => (
+          <Movie key={index} props={movie} />
+        ))}
     </>
   );
 };

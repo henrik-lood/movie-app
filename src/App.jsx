@@ -34,7 +34,7 @@ function App() {
             <MoviePage />
           </Route>
 
-          <Route path="/actor">
+          <Route path="/actor/:actorid">
             <ActorPage />
           </Route>
         </Switch>
