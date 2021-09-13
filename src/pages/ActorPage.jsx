@@ -12,13 +12,10 @@ const ActorPage = () => {
   const { data, error, isError, isFetching, isLoading, isPreviousData } =
     useQuery([`${actorid}`, apiKey], () => getItems(apiKey));
 
-  useEffect(() => {
-    console.log("data is:", data);
-  }, [data]);
+  useEffect(() => {}, [data]);
 
   return (
     <>
-      <div>Actor Page</div>
       {data?.data && <p>{data.data.name}</p>}
       {data?.data &&
         data.data.movie_credits.cast.map((movie, index) => (

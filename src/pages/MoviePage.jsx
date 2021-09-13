@@ -11,13 +11,10 @@ const MoviePage = () => {
   const { data, error, isError, isFetching, isLoading, isPreviousData } =
     useQuery([`${movieid}`, apiKey], () => getItems(apiKey));
 
-  useEffect(() => {
-    console.log("data is:", data);
-  }, [data]);
+  useEffect(() => {}, [data]);
 
   return (
     <>
-      <div>Movie page</div>
       {data?.data && (
         <div>
           <div>

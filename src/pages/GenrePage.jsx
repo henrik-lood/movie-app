@@ -9,10 +9,7 @@ const GenrePage = () => {
   const { data, error, isError, isFetching, isLoading, isPreviousData } =
     useQuery(["genres", apiKey], () => getItems(apiKey));
 
-  useEffect(() => {
-    console.log("data is:", data);
-    console.log(typeof data);
-  }, [data]);
+  useEffect(() => {}, [data]);
 
   return (
     <>
