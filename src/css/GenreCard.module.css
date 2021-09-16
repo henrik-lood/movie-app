@@ -1,0 +1,34 @@
+.genreCard {
+  background-color: rgb(66, 64, 64);
+  padding: 0.5rem 1rem;
+  margin: 0.2rem;
+  text-align: center;
+  text-decoration: inherit;
+  color: white;
+  width: 100%;
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .genreCard {
+    width: 30%;
+  }
+  .cardContainer {
+    margin-top: 1rem;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .genreCard {
+    width: 22%;
+  }
+  .cardContainer {
+    margin-top: 1rem;
+  }
+}

@@ -1,0 +1,63 @@
+.title,
+.date {
+  font-size: 20pt;
+}
+
+.title,
+.text {
+  color: white;
+  padding: 0 1rem;
+}
+
+.date {
+  float: right;
+}
+
+.imgContainer {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.imgSize {
+  width: 90% !important;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .imgSize {
+    width: 70% !important;
+  }
+
+  .title,
+  .date {
+    font-size: 30pt;
+  }
+
+  .title,
+  .text {
+    color: white;
+    padding: 0 1rem;
+  }
+
+  .text {
+    font-size: 20pt;
+  }
+
+  .actorContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .imgSize {
+    width: 30% !important;
+  }
+}

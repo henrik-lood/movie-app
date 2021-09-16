@@ -1,0 +1,32 @@
+.title {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .cardWidth {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 45% !important;
+    margin-top: 1rem;
+    font-size: 16pt;
+  }
+  .title {
+    font-size: 30pt;
+  }
+  .link {
+    color: black;
+    text-decoration: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .cardWidth {
+    margin: 0 auto;
+    width: 18% !important;
+    margin-top: 1rem;
+    font-size: 16pt;
+  }
+  .title {
+    font-size: 30pt;
+  }
+}
