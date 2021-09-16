@@ -1,0 +1,23 @@
+.homeText {
+  padding: 0 1rem;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  margin-top: 40%;
+}
+
+.background {
+  background-color: gray;
+  min-height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  .homeText {
+    font-size: 4rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .homeText {
+    margin-top: 20%;
+  }
+}

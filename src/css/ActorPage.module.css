@@ -1,0 +1,39 @@
+.profileContainer {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.profileImg {
+  width: 90% !important;
+}
+
+.name {
+  color: white;
+  font-size: 20pt;
+}
+
+.bio {
+  width: 90%;
+  margin: 0 auto;
+  text-align: left;
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .profileImg {
+    width: 70% !important;
+  }
+
+  .movieContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .profileImg {
+    width: 20% !important;
+  }
+  .bio {
+    width: 50%;
+  }
+}

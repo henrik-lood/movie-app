@@ -1,28 +1,30 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useQuery } from "react-query";
 import { getItems } from "../services/TMDB-API";
 import { useParams } from "react-router-dom";
 import Movie from "../components/Movie";
+import styles from "../css/MovieList.module.css";
 
 const MovieListPage = () => {
+  // Hämta ut listkategorin som ska skickas i queryn
   const { toptype } = useParams();
-
   const apiKey = `movie/${toptype}?api_key=c7efba5c95f24621cee8bbe5a2936ad5&language=en-US`;
-  const { data, error, isError, isFetching, isLoading, isPreviousData } =
-    useQuery([`${toptype}`, apiKey], () => getItems(apiKey));
-
-  useEffect(() => {
-    console.log("data is:", data);
-  }, [data]);
+  const { data, isError, isLoading } = useQuery([`${toptype}`, apiKey], () =>
+    getItems(apiKey)
+  );
 
   return (
-    <>
-      <div>Movie list page:</div>
+    <div className={styles.container}>
+      {isLoading && <p className="error">Loading, please hold.</p>}
+
+      {isError && <p className="error">Ooops...!</p>}
+
+      {/* Renderar ut filmerna */}
       {data?.data &&
         data.data.results.map((movie, index) => (
           <Movie key={index} props={movie} />
         ))}
-    </>
+    </div>
   );
 };
 

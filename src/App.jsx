@@ -7,10 +7,11 @@ import MoviePage from "./pages/MoviePage";
 import ActorPage from "./pages/ActorPage";
 import MovieListPage from "./pages/MovieListPage";
 import MoviesByGenrePage from "./pages/MoviesByGenrePage";
+import styles from "./css/Home.module.css";
 
 function App() {
   return (
-    <>
+    <div className={styles.background}>
       <Navigation />
       <div className="App">
         <Switch>
@@ -18,7 +19,8 @@ function App() {
             <HomePage />
           </Route>
 
-          <Route path="/genres/:genreid">
+          {/* Används för att generera listor efter genrer */}
+          <Route path={`/genres/:genreid`}>
             <MoviesByGenrePage />
           </Route>
 
@@ -26,6 +28,7 @@ function App() {
             <GenrePage />
           </Route>
 
+          {/* Används för att generera toplistor */}
           <Route path="/movies/:toptype">
             <MovieListPage />
           </Route>
@@ -39,7 +42,7 @@ function App() {
           </Route>
         </Switch>
       </div>
-    </>
+    </div>
   );
 }
 

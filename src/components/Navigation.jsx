@@ -6,36 +6,29 @@ import Navbar from "react-bootstrap/Navbar";
 
 const Navigation = () => {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="dark">
       <Container>
-        <Nav className="ms-auto">
-          <NavLink to="/" className="nav-link">
+        <Navbar.Brand>
+          <NavLink to="/" className="nav-link text-white">
             Home
           </NavLink>
-
-          <NavLink to="/genres" className="nav-link">
+        </Navbar.Brand>
+        <Nav className="ms-auto">
+          <NavLink to="/genres" className="nav-link text-white">
             Genres
           </NavLink>
 
-          <NavLink to="/movies/popular" className="nav-link">
+          <NavLink to="/movies/popular" className="nav-link text-white">
             Popular
           </NavLink>
 
-          <NavLink to="/movies/now_playing" className="nav-link">
+          <NavLink to="/movies/now_playing" className="nav-link text-white">
             Latest
           </NavLink>
 
-          <NavLink to="/movies/top_rated" className="nav-link">
+          <NavLink to="/movies/top_rated" className="nav-link text-white">
             Rated
           </NavLink>
-
-          {/* <NavLink to="/movie" className="nav-link">
-            Movie Page
-          </NavLink>
-
-          <NavLink to="/actor" className="nav-link">
-            Actor Page
-          </NavLink> */}
         </Nav>
       </Container>
     </Navbar>
